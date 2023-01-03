@@ -28,6 +28,7 @@ async function initial() {
 class MongoDB{
     static connect = async (uri) => {
         if(this.client) return this.client;
+        mongoose.set('strictQuery', true);
         this.client = await mongoose.connect(uri, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
