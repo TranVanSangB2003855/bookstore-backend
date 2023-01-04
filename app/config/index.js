@@ -1,6 +1,6 @@
 const config = {
     app: {
-        port:3000 ,
+        port:80 ,
     },
     db: {
         uri: "mongodb+srv://admin:TRVASAmb6902@cluster0.ekgkgef.mongodb.net"
