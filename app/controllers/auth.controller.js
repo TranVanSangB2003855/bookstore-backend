@@ -71,8 +71,8 @@ exports.signin = async (req, res) => {
       authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
     }
 
-    req.session.token = token;
-    console.log("Token [SignIn]: ",token);
+//     req.session.token = token;
+//     console.log("Token [SignIn]: ",token);
 
     let orderPupolate = [];
 
