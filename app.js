@@ -9,11 +9,11 @@ const orderRoute = require("./app/routes/order.routes");
 
 const app = express();
 
-var corsOptions = {
-    origin: "http://localhost:3001"
-};
+// var corsOptions = {
+//     origin: "http://localhost:3001"
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // parse requests of content-type - application/x-www-form-urlencoded
