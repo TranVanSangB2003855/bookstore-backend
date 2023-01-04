@@ -124,7 +124,9 @@ exports.signin = async (req, res) => {
         image: tempt.image[0]
       })
     }
-
+    
+    req.session.token = token;
+    console.log(req.session.token);
     res.status(200).send({
       id: user._id,
       phone: user.phone,
