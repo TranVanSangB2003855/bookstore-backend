@@ -72,6 +72,7 @@ exports.signin = async (req, res) => {
     }
 
     req.session.token = token;
+    console.log("Token [SignIn]: ",token);
 
     let orderPupolate = [];
 
