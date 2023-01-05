@@ -4,7 +4,7 @@ const USER = require("../models/user.model");
 const ROLE = require("../models/role.model");
 
 verifyToken = (req, res, next) => {
-  let token = req.session.token;
+  let token = req.header('auth-token');
     console.log("Token: ",token);
   if (!token) {
     // return res.status(403).send({ message: "No token provided!" });
