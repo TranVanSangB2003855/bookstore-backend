@@ -125,9 +125,9 @@ exports.signin = async (req, res) => {
       })
     }
     
-    req.session.token = token;
-    console.log(req.session.token);
-    res.status(200).send({
+//     req.session.token = token;
+//     console.log(req.session.token); res.header("auth-token", token).send(token);
+    res.status(200).header("auth-token", token).send({
       id: user._id,
       phone: user.phone,
       full_name: user.full_name,
